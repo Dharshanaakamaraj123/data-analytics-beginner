@@ -1,10 +1,26 @@
+import csv
 
-students = ["Arun", "Priya", "Kavi", "Ravi", "Meena"]
-marks = [85, 92, 76, 88, 95]
+total = 0
+count = 0
 
 print("STUDENT PERFORMANCE ANALYSIS")
-print("Total Students:", len(students))
-print("Average Marks:", sum(marks) / len(marks))
-print("Highest Marks:", max(marks))
-print("Lowest Marks:", min(marks))
+
+with open("student_marks.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for student in reader:
+        marks = [
+            int(student["Python"]),
+            int(student["Java"]),
+            int(student["Maths"])
+        ]
+
+        average = sum(marks) / len(marks)
+        total += average
+        count += 1
+
+        print(student["Name"], "Average:", round(average, 2))
+
+print("Total Students:", count)
+print("Class Average:", round(total / count, 2))
 
