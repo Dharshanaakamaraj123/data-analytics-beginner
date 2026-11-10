@@ -1,0 +1,10 @@
+STUDENT PERFORMANCE ANALYSIS
+Total Students: 5
+Average Marks: 87.2
+Highest Marks: 95
+Lowest Marks: 76
+Arun : 85
+Priya : 92
+Kavi : 76
+Ravi : 88
+Meena : 95
